@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<scenairo>
+
+    <author>NJUST</author>
+    <date>2023/7/19</date>
+    <version>v1.0</version>
+
+
+    <!-- 防空型无人战车 -->
+    <UGV_AirDefence>
+		<!-- 装备属性参数 -->
+		<name>Uran-9-AirDefence</name>
+        <!-- 机动 -->
+        <maxSpeed>5</maxSpeed> 						<!-- m/s -->
+        <!-- 探测 -->
+        <detectDis_Day>6000</detectDis_Day> 		<!-- m -->
+        <detectDis_Night>3000</detectDis_Night> 	<!-- m -->
+        <!-- 武器 {最小射程、最大射程、装配数量、目标类型、最大杀伤力} -->
+        <weapon min_fire_range="0" max_fire_range="5000" num="4" maxKill="80">SA-18 Anti-air Missile</weapon>
+	</UGV_AirDefence>
+
+    <!-- 无人侦察机 -->
+	<UAV>
+		<!-- 装备属性参数 -->
+		<name>RQ-4</name>
+		<!-- 机动 -->
+		<cruiseSpeed>150</cruiseSpeed>                  <!-- m/s -->
+		<maxFlightHeight>19000</maxFlightHeight>
+		<!-- 探测 -->
+		<reconnaissanceDis>5000</reconnaissanceDis>   <!-- m -->
+		<!-- 武器 {最小射程、最大射程、装配数量、目标类型、最大杀伤力} -->
+		<weapon min_fire_range="0" max_fire_range="5000" num="4" maxKill="80">Missile</weapon>
+	</UAV>
+
+
+    <!-- 红方 -->
+    <RedCamp>
+		<agent id="01" name="UAV" x="1" y="2" z="3"></agent>
+		<agent id="02" name="UAV" x="1" y="2" z="3"></agent>
+		<agent id="03" name="UAV" x="1" y="2" z="3"></agent>
+    </RedCamp>
+
+
+
+    <!-- 蓝方 -->
+    <BlueCamp>
+		<agent id="11" name="UGV_AirDefence" x="1" y="2" z="3"></agent>
+		<agent id="12" name="UGV_AirDefence" x="1" y="2" z="3"></agent>
+		<agent id="13" name="UGV_AirDefence" x="1" y="2" z="3"></agent>
+    </BlueCamp>
+
+	
+</scenairo>
